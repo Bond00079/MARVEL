@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dropdown_open, .captain_america, .iron_man, .black_widow, .dr_strange, .spider_man, .star_lord, .groot_man {
+    display: none;
+}
