@@ -5,3 +5,7 @@
 .dropdown_open, .captain_america, .iron_man, .black_widow, .dr_strange, .spider_man, .star_lord, .groot_man {
     display: none;
 }
+
+.captain22, .iron22, .widow22, .dr22, .spider22, .star22, .groot22 {
+    display: none;
+}

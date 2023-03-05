@@ -3,6 +3,16 @@ function myFunction() {
     dropdown.classList.toggle("dropdown_open");
 }
 
+function bio()
+{
+    var y = document.getElementById("bio");
+    if(y.style.display === "none") 
+    {
+        y.style.display = "block";
+    }
+    document.getElementById("detailsChar").style.display = "none";
+}
+
 function hidden() {
     var x = document.getElementById("bio");
     if (x.style.display === "none") {
@@ -51,4 +61,41 @@ function groot()
 {
     hidden();
     document.querySelector(".grootMan").classList.toggle("groot_man");
+}
+
+function captain2() {
+    hidden();
+    document.querySelector(".captainMovies").classList.toggle("captain22");
+}
+
+function iron2() 
+{
+    hidden();
+    document.querySelector(".ironMovies").classList.toggle("iron22");
+}
+
+function widow2()
+{
+    hidden();
+    document.querySelector(".widowMovies").classList.toggle("widow22");
+}
+function dr2() 
+{
+    hidden();
+    document.querySelector(".drMovies").classList.toggle("dr22");
+}
+function spider2() 
+{
+    hidden();
+    document.querySelector(".spiderMovies").classList.toggle("spider22");
+}
+function star2() 
+{
+    hidden();
+    document.querySelector(".starMovies").classList.toggle("star22");
+}
+function groot2() 
+{
+    hidden();
+    document.querySelector(".grootMovies").classList.toggle("groot22");
 }
