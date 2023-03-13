@@ -3,11 +3,9 @@ function myFunction() {
     dropdown.classList.toggle("dropdown_open");
 }
 
-function bio()
-{
+function bio() {
     var y = document.getElementById("bio");
-    if(y.style.display === "none") 
-    {
+    if (y.style.display === "none") {
         y.style.display = "block";
     }
     document.getElementById("detailsChar").style.display = "none";
@@ -28,37 +26,31 @@ function america() {
     document.querySelector(".capt").classList.toggle("captain_america");
 }
 
-function iron()
-{
+function iron() {
     hidden();
     document.querySelector(".ironMan").classList.toggle("iron_man");
 }
 
-function widow()
-{
+function widow() {
     hidden();
     document.querySelector(".blackWidow").classList.toggle("black_widow");
 }
-function dr()
-{
+function dr() {
     hidden();
     document.querySelector(".drStrange").classList.toggle("dr_strange");
 }
 
-function spider()
-{
+function spider() {
     hidden();
     document.querySelector(".spiderMan").classList.toggle("spider_man");
 }
 
-function star()
-{
+function star() {
     hidden();
     document.querySelector(".starLord").classList.toggle("star_lord");
 }
 
-function groot()
-{
+function groot() {
     hidden();
     document.querySelector(".grootMan").classList.toggle("groot_man");
 }
@@ -68,34 +60,77 @@ function captain2() {
     document.querySelector(".captainMovies").classList.toggle("captain22");
 }
 
-function iron2() 
-{
+function iron2() {
     hidden();
     document.querySelector(".ironMovies").classList.toggle("iron22");
 }
 
-function widow2()
-{
+function widow2() {
     hidden();
     document.querySelector(".widowMovies").classList.toggle("widow22");
 }
-function dr2() 
-{
+function dr2() {
     hidden();
     document.querySelector(".drMovies").classList.toggle("dr22");
 }
-function spider2() 
-{
+function spider2() {
     hidden();
     document.querySelector(".spiderMovies").classList.toggle("spider22");
 }
-function star2() 
-{
+function star2() {
     hidden();
     document.querySelector(".starMovies").classList.toggle("star22");
 }
-function groot2() 
-{
+function groot2() {
     hidden();
     document.querySelector(".grootMovies").classList.toggle("groot22");
 }
+
+// sliding function 
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+        else {
+            entry.target.classList.remove('show');
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll(".left");
+hiddenElements.forEach((el) => observer.observe(el));
+
+const ex = new IntersectionObserver((enter) =>{
+    enter.forEach((ent) => {
+        console.log(ent);
+        if(ent.isIntersecting) {
+            ent.target.classList.add('up');
+        }
+        else {
+            ent.target.classList.remove('up');
+        }
+    });
+});
+
+const example = document.querySelectorAll(".upper");
+example.forEach((as) => ex.observe(as));
+
+const obs = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+            entry.target.classList.add('rt');
+        }
+        else {
+            entry.target.classList.remove('rt');
+        }
+    });
+});
+
+const right = document.querySelectorAll(".right");
+right.forEach((el) => obs.observe(el));
+
+// -x-x-x-x-x-x-x-
